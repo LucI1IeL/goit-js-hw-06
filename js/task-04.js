@@ -1,5 +1,6 @@
 // 1. Start
 // 2. Initialize counterValue with 0
+let counterValue = 0;
 
 // 3. Retrieve the button with data-action "decrement" and store it in btnDec
 // 4. Retrieve the button with data-action "increment" and store it in btnInc
