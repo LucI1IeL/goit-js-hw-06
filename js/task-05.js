@@ -1,21 +1,19 @@
 // 1. Start
-// 2. Initialize counterValue with 0
+// 2. Retrieve the input element with ID 'name-input' and store it in inName
+const inName = document.getElementById('name-input');
+// 3. Retrieve the span element with ID 'name-output' and store it in outName
+const outName = document.getElementById('name-output');
 
-// 3. Retrieve the button with data-action "decrement" and store it in btnDec
-// 4. Retrieve the button with data-action "increment" and store it in btnInc
-// 5. Retrieve the span element with id "value" and store it in valueSpan
-
-// 6. Attach a click event listener to btnDec
-//     6.1 When btnDec is clicked, do Steps 6.2 and 6.3
-//     6.2 Decrease counterValue by 1
-//     6.3 Update the text content of valueSpan with the new counterValue
-
-// 7. Attach a click event listener to btnInc
-//     7.1 When btnInc is clicked, do Steps 7.2 and 7.3
-//     7.2 Increase counterValue by 1
-//     7.3 Update the text content of valueSpan with the new counterValue
-
-// 8. End
+// 4. Attach an input event listener to inName
+//     4.1 When there is input in inName, do Steps 4.2 to 4.4
+//     4.2 Retrieve the current value from the input event's target and store it in inValue
+//     4.3 If inValue is not empty, set the text content of outName to inValue
+//     4.4 If inValue is empty, set the text content of outName to 'Anonymous'
+inName.addEventListener('input', function(event) {
+  const inValue = event.target.value;
+  outName.textContent = inValue ? inValue : 'Anonymous';
+});
+// 5. End
 
 // //<input type="text" id="name-input" placeholder="Please enter your name" />
 // const inName = document.getElementById('name-input');
