@@ -12,32 +12,3 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-
-// 1. Start
-// 2. Retrieve the element with class "gallery" and store it in galleryList
-const galleryList = document.querySelector('.gallery');
-
-// 3. Initialize an empty string galleryMarkup
-const galleryMarkup = images
-  .map(
-    image =>
-      `<li><img src="${image.url}" alt="${image.alt}" class="gallery-image"></li>`
-  )
-  .join('');
-console.log(galleryMarkup);
-
-galleryList.insertAdjacentHTML('beforeend', galleryMarkup);
-// 4. For each image in the images array, do Steps 5-6
-// 5.    Generate a string of HTML markup for the current image, formatted as:
-//          `<li><img src="{image.url}" alt="{image.alt}" class="gallery-image"></li>`
-//       and append this string to galleryMarkup
-// 6. End For
-// 7. Insert galleryMarkup into galleryList at the position "beforeend" (which adds the markup as the last child of galleryList)
-// 8. End
-
-// const galleryMarkup = images
-//   .map(
-//     image =>
-//       `<li><img src="${image.url}" alt="${image.alt}" class="gallery-image"></li>`
-//   )
-//   .join("");
